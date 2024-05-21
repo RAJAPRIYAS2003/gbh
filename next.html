@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewlett Packard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200&family=Barlow+Condensed:wght@200;300&family=Barlow:wght@300&family=Bellefair&family=Figtree:wght@300;400;500;600&family=Heebo&family=Kaushan+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;1,6..12,200&family=Open+Sans:wght@300;400&family=Raleway:ital,wght@0,100;0,300;1,100;1,200;1,300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+body{
+    height: 150vh;
+}
+.h-container{
+    width: 100%;
+}
+.h-container .h-component{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.h-component .top {
+    margin: 40px 0 15px 0;
+    width: 100%;
+    text-align: center;
+}
+.h-component .top h3{
+    font-size: 25px;
+    padding-bottom: 4px;
+}
+.h-component .center ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.h-component .center ul li{
+    margin: 0 10px;
+    padding: 2px 16px;
+    font-size: 16px; 
+}
+.h-component .center #active{
+    background-color: rgb(7, 189, 7);
+    font-weight: 700;
+}
+.h-component .center #active1{
+    background-color: aqua;
+    font-weight: 700;
+}
+.h-component .bootom{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 250px;
+    margin-left: 150px;
+}
+.h-component .bootom h4{
+    font-size: 20px;
+}
+.h-component .bootom h5{
+    padding: 9px 0 3px 0;
+    font-size: 16px;
+}
+.h-component .bootom h4 span{
+    color: rgb(6, 9, 155);
+    padding-left: 7px;
+}
+
+
+@media only screen and (max-width:500px) and (min-width:100px){
+    .h-component .top h3{
+        font-size: 18px;
+        padding-bottom: 4px;
+    }
+    .h-component .center ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .h-component .center ul li{
+        margin: 10px 5px;
+        padding: 2px ;
+        font-size: 14px; 
+    }
+    .h-component .bootom{
+        flex-direction: column;
+    }
+    .h-container #back{
+        position: absolute;
+        right: 40px;
+        top: 600px;
+    }
+    .h-container #back a{
+        font-size: 16px;
+        padding: 3px 10px;
+    }
+}
+.dropdown h3{
+    width: 300px;
+    border: 1px solid gray;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+.dropdown h3 i{
+    font-size: 15px;
+    padding-left: 145px;
+}
+.dropdown .drop {
+  position: absolute;
+  width: 300px;
+}
+.drop li {
+    list-style-type: none;
+  padding: 3px ;
+  height: 35px;
+  text-align: left;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  transition: all ease-in-out 0.2s;
+  align-items: self-start;
+}
+.navlinks li:hover .drop {
+  display: block;
+  transform: translatey(10px);
+}
+.drop li:hover{
+    background-color: rgb(224, 227, 230);
+}
+.content {
+  position: absolute;
+  display: none;
+  left: 300px;
+  top: 0;
+  width: 580px;
+}
+.content h4{
+    border: 1px solid gray;
+    color: rgb(72, 18, 122);
+    padding: 3px;
+}
+.content h4 i{
+    font-size: 15px;
+    padding-left: 305px;
+}
+.drop li:hover .content {
+  display: block;
+}
+.content1 {
+  position: absolute;
+  display: none;
+  left: 880px;
+  top: 1%;
+  width: 200px;
+}
+.content1 h4{
+    border: 1px solid gray;
+    color: rgb(72, 18, 122);
+    padding: 3px;
+}
+.content1 h4 i{
+    font-size: 15px;
+    padding-left: 145px;
+}
+.drop li:hover .content1 {
+  display: block;
+}
+.content2 {
+  position: absolute;
+  display: none;
+  left: 300px;
+  top: 50%;
+  width: 580px;
+}
+.content2 h4{
+    border: 1px solid gray;
+    color: rgb(72, 18, 122);
+    padding: 3px;
+}
+.content2 h4 i{
+    font-size: 15px;
+    padding-left: 250px;
+}
+.drop li:hover .content2 {
+  display: block;
+}
+.content3 {
+  position: absolute;
+  display: none;
+  left: 880px;
+  top: 50%;
+  width: 200px;
+}
+.content3 h4{
+    border: 1px solid gray;
+    color: rgb(72, 18, 122);
+    padding: 3px;
+}
+.content3 h4 i{
+    font-size: 15px;
+    padding-left: 145px;
+}
+.drop li:hover .content3 {
+  display: block;
+}
+@media only screen and (max-width:500px) and (min-width:100px){
+    body{
+        height: 165vh;
+    }
+    .h-component .bootom{
+        gap: 330px;
+        justify-content: center;
+        align-items: center;
+    }
+    .h-component .bootom{
+        margin-left: 0;
+    }
+    .h-component .bootom h4{
+    font-size: 17px;
+}
+.h-component .bootom h5{
+    padding: 9px 0 3px 0;
+    font-size: 14px;
+}
+.h-component .bootom h4 span{
+    color: rgb(6, 9, 155);
+    padding-left: 7px;
+}
+.dropdown h3{
+    width: 260px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+.dropdown h3 i{
+    font-size: 15px;
+    padding-left: 130px;
+}
+.dropdown .drop {
+  width: 260px;
+}
+.drop li {
+    list-style-type: none;
+  padding: 3px ;
+  height: 35px;
+  font-size: 12px;
+}
+
+.content {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 50%;
+  width: 260px;
+  background-color: rgb(202, 206, 206);
+}
+.content h4{
+   font-size: 10px;
+}
+.content h4 i{
+    font-size: 13px;
+    padding-left: 40px;
+}
+.content1 {
+    display: none;
+}
+.drop li:hover .content1 {
+  display: none;
+}
+
+.content2 {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 100%;
+  width: 260px;
+}
+.content2 h4{
+    border: 1px solid gray;
+    color: rgb(72, 18, 122);
+    padding: 3px;
+}
+.content2 h4 i{
+    display: none;
+}
+.content3 {
+  display: none;
+}
+.drop li:hover .content3 {
+  display: none;
+}
+
+}
+   </style>
+</head>
+<body>
+    <main>
+        <section class="h-container">
+            <div class="h-component">
+                <div class="top">
+                    <h3>Azure Stack HCI Sizing Tool</h3>
+                </div>
+                <div class="center">
+                    <ul>
+                        <li id="active">CPU</li>
+                        <li id="active"> Server</li>
+                        <li id="active">Resiliency</li>
+                        <li id="active">Strorage</li>
+                        <li id="active1"> <i class="fa-solid fa-play"></i> Network</li>
+                        <li>Availability</li>
+                        <li>Result</li>
+                    </ul>
+                </div>
+                <div class="bootom">
+                    <div class="b-top">
+                       <h4>Select <span>Network adapter</span></h4>
+                       <h5>Option Type</h5>
+                       <div class="dropdown">
+                            <h3>Select adapter <i class="fa-solid fa-chevron-down"></i></h3>
+                            <ul class="drop">
+                                <li> Network adaptermOCP3
+                                    <ul class="content">
+                                        <h4> Network adapter OCP3 <i class="fa-solid fa-chevron-down"></i></h4>
+                                        <li>Marvell QL423HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Mellanox MCX23HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Mellonax QL423HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Marvell QL423HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Intel E8103HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                    </ul>
+                                    <ul class="content1">
+                                        <h4>Part Number</h4>
+                                        <li>P10118-B21</li>
+                                        <li>P10112-B21</li>
+                                        <li>P42118-B21</li>
+                                        <li>P10106-B21</li>
+                                        <li>P10118-B21</li>
+                                    </ul>
+                                </li>
+                                <li>Network adapter PCLe plug-in
+                                    <ul class="content2">
+                                        <h4>Network adapter PCLe plug-in<i class="fa-solid fa-chevron-down"></i></h4>
+                                        <li>Marvell QL423HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Mellanox MCX23HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Mellonax QL423HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Marvell QL423HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                        <li>Intel E8103HQCU Ethernet 10/25gb 2-port SFP28 OCP3Adapter for HPE</li>
+                                    </ul>
+                                    <ul class="content3">
+                                        <h4>Part Number</h4>
+                                        <li>P10118-B21</li>
+                                        <li>P10112-B21</li>
+                                        <li>P42118-B21</li>
+                                        <li>P10106-B21</li>
+                                        <li>P10118-B21</li>
+                                    </ul>
+                                   
+                                </li>
+                            </ul>
+                       </div>           
+                    </div>
+                    <div class="b-bottom">
+                       
+                            <h4>Select <span>Network switch</span></h4>
+                        <h5>Management switch</h5>
+                        <div class="dropdown">
+                            <h3>Select Switch<i class="fa-solid fa-chevron-down"></i></h3>
+                            <ul class="drop">
+                                <li> HPE Flex Fabric 5901 Switch Series
+                                    <ul class="content2">
+    
+                                            <h4> HPE Flex Fabric 5901 Switch Series</h4>
+                                            <li>HPE Flex Fabric 5944 Switch Series</li>
+                                            <li> HPE Flex Fabric 5945 Switch Series</li>
+                                        
+                                    </ul>
+                                </li>
+                                <li>HPE Aruba Networking Switch Series
+                                    <ul class="content2">
+                                        <h4>HPE Aruba Networking Switch Series</h4>
+                                        <li>HPE Flex Fabric 8100 Switch Series</li>
+                                        <li>HPE Flex Fabric 8325 Switch Series</li>
+                                        <li>HPE Flex Fabric 8360 Switch Series</li>
+                                        <li>HPE Flex Fabric 9300 Switch Series</li>
+                                        <li>HPE Flex Fabric 100000 Switch Series</li>
+                                    </ul>
+                                   
+                                   
+                                </li>
+                            </ul>
+                       </div>
+                       
+                      
+
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    
+</body>
+</html>
